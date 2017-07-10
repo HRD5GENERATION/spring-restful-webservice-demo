@@ -2,19 +2,12 @@ package com.phearun.model;
 
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name="person")
 public class Category {
 	
-	@XmlElement(name="id")
 	private int id;
 	
-	@XmlElement(name="name")
 	private String name;
 	
-	@XmlElement(name="articles")
 	private List<Article> articles;
 	
 	public Category(){}
