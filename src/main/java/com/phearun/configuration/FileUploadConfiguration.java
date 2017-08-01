@@ -20,7 +20,6 @@ public class FileUploadConfiguration extends WebMvcConfigurerAdapter{
 	@Description("Mapping resource for uploading to file system location")
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler(CLIENT_PATH + "/**")
-				.addResourceLocations("file:" + SERVER_PATH);
+		registry.addResourceHandler(CLIENT_PATH + "/**").addResourceLocations("file:" + SERVER_PATH);
 	}
 }

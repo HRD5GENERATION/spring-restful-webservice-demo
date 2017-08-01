@@ -45,20 +45,7 @@ public class DatabaseConfiguration {
 	@Profile("memDb")
 	public DataSource inMemoryDb(){
 		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		builder.setType(EmbeddedDatabaseType.H2)
-			   .addScript("db/schema.sql")
-			   .addScript("db/data.sql");
+		builder.setType(EmbeddedDatabaseType.H2);
 		return builder.build();
 	}
-	
-	/*@Value("classpath:db/schema.sql")
-	private Resource schema;
-	
-	@Value("classpath:db/data.sql")
-	private Resource data;
-	
-	private void initializeDatabase(DataSource dataSource) {
-		DatabasePopulator populator = new ResourceDatabasePopulator(schema, data);
-		DatabasePopulatorUtils.execute(populator, dataSource);
-	}*/
 }
